@@ -1,4 +1,4 @@
-import Bottom from "../components/BottomDeco";
+import Bottom from "../components/Bottom";
 import Particles from "../components/Particles";
 import asset from "../assets/LogoAPP.png";
 import sirius from "../assets/sirius_logo.png";
@@ -14,7 +14,7 @@ const Landing = () => {
           <div style={{ paddingLeft: "15px" }}> SIRIUS FRONT-END CHALLENGE</div>
         </div>
         <div className='nav-items-container'>
-          <div className='contact-us'>Contact uss</div>
+          <div className='contact-us'>Araujo Martin</div>
         </div>
       </div>
       <Particles id='tsparticles' />

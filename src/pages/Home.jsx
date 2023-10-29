@@ -1,10 +1,10 @@
-import Bottom from "../components/BottomDeco";
+import Bottom from "../components/Bottom";
 import "../styles/Landing.css";
 import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ background: "#000" }}>
       <Header />
 
       <Bottom />
