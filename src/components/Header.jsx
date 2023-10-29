@@ -1,14 +1,14 @@
 import asset from "../assets/triangles.png";
-import "../styles/Bottom.css";
+import "../styles/Header.css";
 
-const Bottom = () => {
+const Header = () => {
   return (
-    <div className='footer-images'>
+    <div className='header-images'>
       <div className='image'>
         <img src={asset} alt='' />
       </div>
       <div className='image'>
-        <img src={asset} alt='' style={{ transform: "scaleX(-1)" }} />
+        <img src={asset} alt='' style={{ transform: " scaleX(-1)" }} />
       </div>
       <div className='image'>
         <img src={asset} alt='' />
@@ -20,4 +20,4 @@ const Bottom = () => {
   );
 };
 
-export default Bottom;
+export default Header;

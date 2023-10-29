@@ -1,0 +1,70 @@
+.nav-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 3em;
+  width: 100%;
+  color: #fff;
+  top: 0;
+  z-index: 99999999;
+  background-color: #000;
+  font-family: "Gotham-Light", sans-serif;
+  position: absolute;
+  box-shadow: 0 20px 100px 60px #000;
+}
+
+.brand {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+  width: 60%;
+  font-size: 25px;
+}
+
+.nav-items-container {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40%;
+  justify-content: space-around;
+}
+
+.logo-portaid {
+  position: absolute;
+  width: 40rem;
+  top: 24vh;
+  left: 6vh;
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.bn {
+  display: flex;
+  padding: 0.5em 1.7em;
+  margin: 0 0.1em 0.1em 0;
+  border: 0.16em solid rgb(255, 255, 255);
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
+  text-align: center;
+  transition: all 0.2s;
+  align-items: center;
+}
+
+.bn:hover {
+  color: black;
+  background-color: rgb(255, 255, 255);
+}
+
+.bnp {
+  position: absolute;
+  bottom: 40vh;
+  right: 20vh;
+}

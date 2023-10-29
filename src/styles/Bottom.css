@@ -1,0 +1,14 @@
+.footer-images {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  bottom: 0;
+}
+.image {
+  display: flex;
+  align-items: flex-end;
+  width: 25%;
+}
+img {
+  width: 100%;
+}
