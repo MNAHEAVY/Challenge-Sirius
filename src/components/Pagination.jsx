@@ -2,6 +2,7 @@ import "../styles/Pagination.css";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 
+// eslint-disable-next-line react/prop-types
 const Pagination = ({ currentPage, pokemonsPerPage, totalPokes, paginate }) => {
   const maxButtons = 5;
   const pages = [];

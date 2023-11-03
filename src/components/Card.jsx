@@ -1,11 +1,11 @@
-//import { Link } from 'react-router-dom';
+/* eslint-disable react/prop-types */
+import { Link } from "react-router-dom";
 import "../styles/Card.css";
 import { FisrtMayus } from "../helpers/FirstMayus";
 
 const CardPoke = ({ pokemon }) => {
   return (
-    //<Link to={`/pokemon/${pokemon.id}`} classNameName='card-pokemon'>
-    <>
+    <Link to={`/pokemon/${pokemon.id}`} classNameName='card-pokemon'>
       <div className='card-img'>
         <img
           src={pokemon.sprites.other.dream_world.front_default}
@@ -23,9 +23,7 @@ const CardPoke = ({ pokemon }) => {
           ))}
         </div>
       </div>
-    </>
-
-    //</Link>
+    </Link>
   );
 };
 

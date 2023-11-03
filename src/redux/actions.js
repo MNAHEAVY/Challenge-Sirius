@@ -1,11 +1,10 @@
 import axios from "axios";
 
-import { getAllPokemons, setTotalpokes } from "./reducer";
+import { getAllPokemons, setTotalpokes, getPokeById } from "./reducer";
 
 const API_BASE_URL = "https://pokeapi.co/api/v2";
 
 export const getAllPokemonsAction = (limit, offset) => {
-  console.log(limit, offset);
   return async (dispatch) => {
     try {
       const pokemons = await axios(
@@ -23,6 +22,17 @@ export const getAllPokemonsAction = (limit, offset) => {
 
       dispatch(getAllPokemons(detailedPokemons));
       dispatch(setTotalpokes(totalPokes));
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+};
+
+export const getPokeByIdAction = (pokeId) => {
+  return async (dispatch) => {
+    try {
+      const pokemons = await axios(`${API_BASE_URL}/pokemon/${pokeId}`);
+      dispatch(getPokeById(pokemons.data));
     } catch (error) {
       console.error("Error fetching data:", error);
     }
