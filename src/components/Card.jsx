@@ -5,7 +5,7 @@ import { FisrtMayus } from "../helpers/FirstMayus";
 
 const CardPoke = ({ pokemon }) => {
   return (
-    <Link to={`/pokemon/${pokemon.id}`} classNameName='card-pokemon'>
+    <Link to={`/pokemon/${pokemon.id}`} className='card-pokemon'>
       <div className='card-img'>
         <img
           src={pokemon.sprites.other.dream_world.front_default}

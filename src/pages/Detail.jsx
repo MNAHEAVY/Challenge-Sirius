@@ -5,6 +5,7 @@ import { FisrtMayus } from "../helpers/FirstMayus";
 import { getPokeByIdAction } from "../redux/actions";
 import Loader from "../components/Loader";
 import "../styles/Detail.css";
+import BackButton from "../components/Back";
 
 const Detail = () => {
   const dispatch = useDispatch();
@@ -58,7 +59,7 @@ const Detail = () => {
                 alt={`Pokemon ${pokemon?.name}`}
               />
             </div>
-
+            <BackButton />
             <div className='container-info-pokemon'>
               <h1>{FisrtMayus(pokemon.name)}</h1>
               <div className='card-types info-pokemon-type'>
@@ -133,9 +134,9 @@ const Detail = () => {
               </a>
               <div className='moves'>
                 <h2>Moves</h2>
-                <ul>
+                <ul className='unor'>
                   {pokemon.moves.map((move, index) => (
-                    <li key={index}>
+                    <li className='list' key={index}>
                       {move.move.name}
                       <div className='moves-detail'>
                         <strong>Accuracy: </strong>{" "}

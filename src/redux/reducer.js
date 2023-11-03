@@ -13,8 +13,10 @@ const pokeSlice = createSlice({
   initialState,
   reducers: {
     getAllPokemons(state, action) {
-      state.allpokemons = action.payload;
       state.pokemons = action.payload;
+    },
+    getGlobalPokemons(state, action) {
+      state.allpokemons = action.payload;
     },
     setTotalpokes(state, action) {
       state.total = action.payload;
@@ -28,6 +30,11 @@ const pokeSlice = createSlice({
   },
 });
 
-export const { getAllPokemons, setTotalpokes, getPokeById, getPokeEvo } =
-  pokeSlice.actions;
+export const {
+  getAllPokemons,
+  setTotalpokes,
+  getPokeById,
+  getPokeEvo,
+  getGlobalPokemons,
+} = pokeSlice.actions;
 export default pokeSlice.reducer;

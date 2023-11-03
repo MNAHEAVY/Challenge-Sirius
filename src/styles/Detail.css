@@ -190,7 +190,7 @@
   flex-direction: column;
   align-items: center;
 }
-ul {
+.unor {
   list-style: none;
   width: 28rem;
   padding: 0px;
@@ -199,7 +199,7 @@ ul {
   padding: 5px;
 }
 
-li {
+.list {
   display: flex;
   margin: 0;
   padding: 10px;
@@ -209,11 +209,11 @@ li {
   align-items: center;
 }
 
-li > text {
+.list > text {
   font-size: 2rem;
 }
 
-li > p {
+.list > p {
   margin: 0;
   font-size: 0.9rem; /* Tamaño del texto */
   color: white; /* Texto en color blanco */

@@ -6,7 +6,6 @@ import Header from "./components/Header";
 import Bottom from "./components/Bottom";
 import Detail from "./pages/Detail";
 import Evolution from "./pages/Evolution";
-//import Cart from "./pages/Cart/Cart";
 
 const App = () => {
   return (
@@ -18,8 +17,6 @@ const App = () => {
         <Route exact path='/inicio' element={<Home />} />
         <Route exact path='/pokemon/:id' element={<Detail />} />
         <Route exact path='/evolution/:id' element={<Evolution />} />
-        {/* <Route path='/favoritos' element={<Favoritos />} />
-        <Route path='/cart' element={<Cart />} /> */}
       </Routes>
     </Router>
   );
