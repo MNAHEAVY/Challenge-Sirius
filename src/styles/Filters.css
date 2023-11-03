@@ -1,0 +1,10 @@
+.filter-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.filter-contain {
+  padding-left: 3rem;
+  padding-bottom: 1rem;
+}

@@ -1,4 +1,3 @@
-import Bottom from "../components/Bottom";
 import Particles from "../components/Particles";
 import asset from "../assets/LogoAPP.png";
 import sirius from "../assets/sirius_logo.png";
@@ -25,8 +24,6 @@ const Landing = () => {
           Ingresar
         </a>
       </div>
-
-      <Bottom />
     </div>
   );
 };

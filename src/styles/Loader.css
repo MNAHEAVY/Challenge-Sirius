@@ -1,0 +1,49 @@
+.loaderContent {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  z-index: 100;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader img {
+  animation: fade 1.5s infinite;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.circle {
+  box-sizing: border-box;
+  width: 30vh;
+  height: 30vh;
+  border-radius: 100%;
+  border: 1.5vw solid rgba(0, 0, 0, 0.229);
+  border-top-color: #000;
+  position: absolute;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

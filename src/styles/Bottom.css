@@ -1,7 +1,7 @@
 .footer-images {
   display: flex;
   flex-direction: row;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 }
 .image {

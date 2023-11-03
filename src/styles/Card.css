@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+
+:root {
+  --color-fire: #ff7402;
+  --color-grass: #9bcc50;
+  --color-steel: #9eb7b8;
+  --color-water: #4592c4;
+  --color-psychic: #f366b9;
+  --color-ground: #ab9842;
+  --color-ice: #51c4e7;
+  --color-flying: #3dc7ef;
+  --color-ghost: #4d5b64;
+  --color-normal: #a4acaf;
+  --color-poison: #7e0058;
+  --color-rock: #a38c21;
+  --color-fighting: #d56723;
+  --color-dark: #707070;
+  --color-bug: #729f3f;
+  --color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+  --color-electric: #bba909;
+  --color-fairy: #fdb9e9;
+  --color-shadow: #7b62a3;
+  --color-unknow: #757575;
+
+  --color-primary: #006d77;
+  --color-primary-hover: #83c5be;
+}
+
+.card-pokemon {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  height: 250px;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 11;
+}
+
+.card-info {
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-info h3 {
+  color: #f3f3f3;
+}
+
+.pokemon-id {
+  display: block;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.card-types {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card-types span {
+  font-size: 12px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.cards {
+  position: absolute;
+  display: flex;
+  gap: 30px;
+  z-index: 10;
+}
+
+.water {
+  background-color: var(--color-water);
+}
+
+.grass {
+  background-color: var(--color-grass);
+}
+
+.poison {
+  background-color: var(--color-poison);
+}
+
+.fire {
+  background-color: var(--color-fire);
+}
+
+.bug {
+  background-color: var(--color-bug);
+}
+
+.dragon {
+  background: var(--color-dragon);
+}
+
+.flying {
+  background-color: var(--color-flying);
+}
+
+.ground {
+  background-color: var(--color-ground);
+}
+
+.steel {
+  background-color: var(--color-steel);
+}
+
+.psychic {
+  background-color: var(--color-psychic);
+}
+
+.ice {
+  background-color: var(--color-ice);
+}
+
+.ghost {
+  background-color: var(--color-ghost);
+}
+
+.normal {
+  background-color: var(--color-normal);
+}
+
+.rock {
+  background-color: var(--color-rock);
+}
+
+.electric {
+  background-color: var(--color-electric);
+}
+
+.fighting {
+  background-color: var(--color-fighting);
+}
+
+.fairy {
+  background-color: var(--color-fairy);
+}
+
+.dark {
+  background-color: var(--color-dark);
+}
