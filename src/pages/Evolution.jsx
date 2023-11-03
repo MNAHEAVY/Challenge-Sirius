@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import { getPokeByIdAction, getPokeEvoAction } from "../redux/actions";
+import BackButton from "../components/Back";
 
 const Evolution = () => {
   const dispatch = useDispatch();
@@ -85,6 +86,7 @@ const Evolution = () => {
           >
             <h1>Evolution chain of {pokemon?.name}</h1>
           </div>
+          <BackButton />
           <div
             style={{
               margin: "3rem",

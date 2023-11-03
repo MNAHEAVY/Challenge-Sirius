@@ -10,6 +10,7 @@ import { Box } from "@mui/material";
 import Pagination from "../components/Pagination";
 import Loader from "../components/Loader";
 import SearchBar from "../components/SearchBar";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -40,7 +41,10 @@ const Home = () => {
       ) : (
         <>
           <div style={{ width: "auto", height: "180px", padding: "3rem" }}>
-            <img className='img-logo' src={asset} alt='logo pikapikapp' />
+            <Link to='/'>
+              {" "}
+              <img className='img-logo' src={asset} alt='logo pikapikapp' />
+            </Link>
             <SearchBar />
           </div>
           <Filters />
