@@ -9,6 +9,7 @@ import Filters from "../components/Filters";
 import { Box } from "@mui/material";
 import Pagination from "../components/Pagination";
 import Loader from "../components/Loader";
+import SearchBar from "../components/SearchBar";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -40,6 +41,7 @@ const Home = () => {
         <>
           <div style={{ width: "auto", height: "180px", padding: "3rem" }}>
             <img className='img-logo' src={asset} alt='logo pikapikapp' />
+            <SearchBar />
           </div>
           <Filters />
           <Box className='scrollable-container'>

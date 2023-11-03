@@ -61,40 +61,53 @@ const Detail = () => {
               </div>
             </div>
           </div>
-
-          <div className='container-stats'>
-            <h1>Stats</h1>
-            <div className='stats'>
-              <div className='stat-group'>
-                <span>Hp</span>
-                <div className='progress-bar'></div>
-                <span className='counter-stat'>{pokemon.stats[0].base_stat}</span>
+          <div style={{ display: "flex", padding: "0rem 0rem 4rem 3rem" }}>
+            <div className='container-stats'>
+              <h1>Stats</h1>
+              <div className='stats'>
+                <div className='stat-group'>
+                  <span>Hp</span>
+                  <div className='progress-bar'></div>
+                  <span className='counter-stat'>{pokemon.stats[0].base_stat}</span>
+                </div>
+                <div className='stat-group'>
+                  <span>Attack</span>
+                  <div className='progress-bar'></div>
+                  <span className='counter-stat'>{pokemon.stats[1].base_stat}</span>
+                </div>
+                <div className='stat-group'>
+                  <span>Defense</span>
+                  <div className='progress-bar'></div>
+                  <span className='counter-stat'>{pokemon.stats[2].base_stat}</span>
+                </div>
+                <div className='stat-group'>
+                  <span>Special Attack</span>
+                  <div className='progress-bar'></div>
+                  <span className='counter-stat'>{pokemon.stats[3].base_stat}</span>
+                </div>
+                <div className='stat-group'>
+                  <span>Special Defense</span>
+                  <div className='progress-bar'></div>
+                  <span className='counter-stat'>{pokemon.stats[4].base_stat}</span>
+                </div>
+                <div className='stat-group'>
+                  <span>Speed</span>
+                  <div className='progress-bar'></div>
+                  <span className='counter-stat'>{pokemon.stats[5].base_stat}</span>
+                </div>
               </div>
-              <div className='stat-group'>
-                <span>Attack</span>
-                <div className='progress-bar'></div>
-                <span className='counter-stat'>{pokemon.stats[1].base_stat}</span>
-              </div>
-              <div className='stat-group'>
-                <span>Defense</span>
-                <div className='progress-bar'></div>
-                <span className='counter-stat'>{pokemon.stats[2].base_stat}</span>
-              </div>
-              <div className='stat-group'>
-                <span>Special Attack</span>
-                <div className='progress-bar'></div>
-                <span className='counter-stat'>{pokemon.stats[3].base_stat}</span>
-              </div>
-              <div className='stat-group'>
-                <span>Special Defense</span>
-                <div className='progress-bar'></div>
-                <span className='counter-stat'>{pokemon.stats[4].base_stat}</span>
-              </div>
-              <div className='stat-group'>
-                <span>Speed</span>
-                <div className='progress-bar'></div>
-                <span className='counter-stat'>{pokemon.stats[5].base_stat}</span>
-              </div>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                width: "50%",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <a href={`/evolution/${id}`} className='bn5'>
+                See Evolution
+              </a>
             </div>
           </div>
         </>
