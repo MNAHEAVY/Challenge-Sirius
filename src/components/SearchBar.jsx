@@ -23,7 +23,7 @@ const SearchBar = ({ onSearch }) => {
     <div className='search-bar'>
       <input
         type='text'
-        placeholder='Search videos...'
+        placeholder='Search pokemons...'
         value={searchTerm}
         onChange={handleInputChange}
         onKeyPress={handleKeyPress}

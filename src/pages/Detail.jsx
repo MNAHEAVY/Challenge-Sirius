@@ -58,6 +58,10 @@ const Detail = () => {
                   <p>Weight</p>
                   <span>{pokemon.weight}KG</span>
                 </div>
+                <div className='group-info'>
+                  <p>XP</p>
+                  <span>{pokemon.base_experience}</span>
+                </div>
               </div>
             </div>
           </div>
@@ -108,6 +112,7 @@ const Detail = () => {
               <a href={`/evolution/${id}`} className='bn5'>
                 See Evolution
               </a>
+              {/* moves */}
             </div>
           </div>
         </>
