@@ -3,6 +3,7 @@ import asset from "../assets/logoapp.png";
 import sirius from "../assets/sirius_logo.png";
 import pokeball from "../assets/pokeball.png";
 import "../styles/Landing.css";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -19,10 +20,10 @@ const Landing = () => {
       <Particles id='tsparticles' />
       <img className='logo-portaid' src={asset} alt='' />
       <div className='bnp'>
-        <a href='/inicio' className='bn'>
+        <Link to='/inicio' className='bn'>
           <img src={pokeball} alt='' style={{ width: "45px", paddingRight: "15px" }} />{" "}
           Ingresar
-        </a>
+        </Link>
       </div>
     </div>
   );

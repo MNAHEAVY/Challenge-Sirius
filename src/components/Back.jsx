@@ -1,11 +1,12 @@
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { Link } from "react-router-dom";
 
 const BackButton = () => {
   return (
     <div style={{ position: "fixed", top: 20, left: 20 }}>
-      <a href='/'>
+      <Link href='/inicio'>
         <ArrowBackIosIcon />
-      </a>
+      </Link>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { FisrtMayus } from "../helpers/FirstMayus";
 import { getPokeByIdAction } from "../redux/actions";
 import Loader from "../components/Loader";
@@ -129,9 +129,9 @@ const Detail = () => {
                 alignItems: "center",
               }}
             >
-              <a href={`/evolution/${id}`} className='bn5'>
+              <Link to={`/evolution/${id}`} className='bn5'>
                 See Evolution
-              </a>
+              </Link>
               <div className='moves'>
                 <h2>Moves</h2>
                 <ul className='unor'>
