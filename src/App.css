@@ -27,7 +27,9 @@
   --color-primary: #006d77;
   --color-primary-hover: #83c5be;
 }
-
+:-webkit-scrollbar {
+  display: none;
+}
 * {
   margin: 0;
   box-sizing: border-box;

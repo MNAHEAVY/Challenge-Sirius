@@ -11,6 +11,7 @@ const Detail = () => {
   const pokemon = useSelector((state) => state.pokemones.pokemon);
   const { id } = useParams();
   const [isLoading, setIsLoading] = useState(true);
+  const [moveDetails, setMoveDetails] = useState([]);
 
   useEffect(() => {
     dispatch(getPokeByIdAction(id))
@@ -23,6 +24,24 @@ const Detail = () => {
       });
   }, [dispatch, id]);
 
+  useEffect(() => {
+    if (pokemon && pokemon.moves) {
+      const moveUrls = pokemon.moves.map((move) => move.move.url);
+
+      // Realiza una solicitud para obtener detalles de cada movimiento
+      Promise.all(
+        moveUrls.map((moveUrl) => fetch(moveUrl).then((response) => response.json()))
+      )
+        .then((moveData) => {
+          setMoveDetails(moveData);
+        })
+        .catch((error) => {
+          console.error("Error al cargar detalles de movimientos:", error);
+        });
+    }
+  }, [pokemon]);
+
+  console.log(moveDetails);
   return (
     <>
       {isLoading ? (
@@ -112,7 +131,26 @@ const Detail = () => {
               <a href={`/evolution/${id}`} className='bn5'>
                 See Evolution
               </a>
-              {/* moves */}
+              <div className='moves'>
+                <h2>Moves</h2>
+                <ul>
+                  {pokemon.moves.map((move, index) => (
+                    <li key={index}>
+                      {move.move.name}
+                      <div className='moves-detail'>
+                        <strong>Accuracy: </strong>{" "}
+                        <p>{moveDetails[index]?.accuracy || "N/A"}</p>
+                        <strong>Damage: </strong>{" "}
+                        <p>{moveDetails[index]?.damage_class.name || "N/A"}</p>
+                        <strong>Power: </strong>{" "}
+                        <p>{moveDetails[index]?.power || "N/A"}</p>
+                        <strong>Type: </strong>{" "}
+                        <p>{moveDetails[index]?.type.name || "N/A"}</p>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </>
