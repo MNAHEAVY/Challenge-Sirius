@@ -1,5 +1,5 @@
 import Particles from "../components/Particles";
-import asset from "../assets/LogoAPP.png";
+import asset from "../assets/logoapp.png";
 import sirius from "../assets/sirius_logo.png";
 import pokeball from "../assets/pokeball.png";
 import "../styles/Landing.css";

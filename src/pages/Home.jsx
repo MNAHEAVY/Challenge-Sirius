@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllPokemonsAction } from "../redux/actions";
 import Grid from "@mui/material/Grid";
 import CardPoke from "../components/Card";
-import asset from "../assets/LogoApp.png";
+import asset from "../assets/logoapp.png";
 import "../styles/Home.css";
 import Filters from "../components/Filters";
 import { Box } from "@mui/material";
