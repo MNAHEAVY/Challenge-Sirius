@@ -7,7 +7,7 @@
 }
 
 .header-main-pokemon {
-  margin-top: 10rem;
+  margin: 3rem 1rem 1rem 3rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -15,10 +15,9 @@
 
 .number-pokemon {
   position: absolute;
-  top: -130px;
-  left: 0;
-
-  font-size: 200px;
+  top: -2rem;
+  left: 2rem;
+  font-size: 150px;
   font-weight: 700;
   color: var(--color-primary-hover);
 }

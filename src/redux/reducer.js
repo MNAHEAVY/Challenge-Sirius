@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   pokemons: [],
-  allpokemons: [],
+  filtered: [],
+  searched: [],
   pokemon: {},
   evolution: {},
   total: 0,
@@ -15,8 +16,11 @@ const pokeSlice = createSlice({
     getAllPokemons(state, action) {
       state.pokemons = action.payload;
     },
-    getGlobalPokemons(state, action) {
-      state.allpokemons = action.payload;
+    setSearchedPokemons(state, action) {
+      state.searched = action.payload;
+    },
+    setFilteredPokemons(state, action) {
+      state.filtered = action.payload;
     },
     setTotalpokes(state, action) {
       state.total = action.payload;
@@ -32,9 +36,11 @@ const pokeSlice = createSlice({
 
 export const {
   getAllPokemons,
+  setSearchedPokemons,
   setTotalpokes,
   getPokeById,
   getPokeEvo,
   getGlobalPokemons,
+  setFilteredPokemons,
 } = pokeSlice.actions;
 export default pokeSlice.reducer;

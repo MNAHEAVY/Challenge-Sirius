@@ -56,10 +56,10 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.5em !important;
+  height: 1.5em !important;
   display: inline-block;
-  fill: #ffffff;
+  fill: white !important;
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;

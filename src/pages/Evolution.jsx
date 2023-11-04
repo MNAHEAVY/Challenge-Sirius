@@ -4,6 +4,9 @@ import { useParams } from "react-router-dom";
 import Loader from "../components/Loader";
 import { getPokeByIdAction, getPokeEvoAction } from "../redux/actions";
 import BackButton from "../components/Back";
+import asset from "../assets/arrows.png";
+import "../styles/Evolution.css";
+import { FirstMayus } from "../helpers/FirstMayus";
 
 const Evolution = () => {
   const dispatch = useDispatch();
@@ -66,7 +69,7 @@ const Evolution = () => {
       }
     }
   }, [evolutionData]);
-
+  console.log(evoDetails);
   return (
     <div>
       {isLoading ? (
@@ -75,49 +78,30 @@ const Evolution = () => {
         </div>
       ) : evoDetails.length > 0 ? (
         <div>
-          <div
-            style={{
-              margin: "3rem",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              alignContent: "center",
-            }}
-          >
+          <div className='evo-header'>
             <h1>Evolution chain of {pokemon?.name}</h1>
           </div>
           <BackButton />
-          <div
-            style={{
-              margin: "3rem",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "nowrap",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
+          <div className='evo-contain'>
             {evoDetails.map((evoData) => (
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  flexWrap: "nowrap",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  width: " 10rem",
-                  height: " 10rem",
-                }}
-                key={evoData.name}
-              >
-                <h2>{evoData.name}</h2>
+              <div className='evo-card' key={evoData.name}>
+                <h2
+                  style={{
+                    fontSize: "2rem",
+                    color: "white",
+                  }}
+                >
+                  {FirstMayus(evoData.name)}
+                </h2>
                 <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${evoData.id}.svg`}
                   alt=''
                 />
               </div>
             ))}
-          </div>
+          </div>{" "}
+          <img className='arrow-a' src={asset} alt='' />
+          <img className='arrow-b' src={asset} alt='' />
         </div>
       ) : null}
     </div>

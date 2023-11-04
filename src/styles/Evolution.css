@@ -1,0 +1,42 @@
+.arrow-a {
+  position: absolute;
+  width: 6rem;
+  top: 50%;
+  left: 40%;
+  rotate: -22deg;
+}
+
+.arrow-b {
+  position: absolute;
+  width: 6rem;
+  top: 50%;
+  right: 33%;
+  rotate: 22deg;
+  transform: scaleY(-1);
+}
+
+.evo-header {
+  margin: 3rem;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 45px;
+}
+
+.evo-contain {
+  margin: 3rem;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.evo-card {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+}

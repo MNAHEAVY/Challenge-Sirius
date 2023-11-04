@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
-import { FisrtMayus } from "../helpers/FirstMayus";
+import { FirstMayus } from "../helpers/FirstMayus";
 import { getPokeByIdAction } from "../redux/actions";
 import Loader from "../components/Loader";
 import "../styles/Detail.css";
@@ -61,7 +61,7 @@ const Detail = () => {
             </div>
             <BackButton />
             <div className='container-info-pokemon'>
-              <h1>{FisrtMayus(pokemon.name)}</h1>
+              <h1>{FirstMayus(pokemon.name)}</h1>
               <div className='card-types info-pokemon-type'>
                 {pokemon.types.map((type) => (
                   <span key={type.type.name} className={`${type.type.name}`}>
